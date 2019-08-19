@@ -1,0 +1,15 @@
+{
+  "name": "fibonnaci",
+  "version": "1.0.0",
+  "description": "write fibonnaci function to practice tdd",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit"
+  },
+  "keywords": [
+    "tdd",
+    "javascript"
+  ],
+  "author": "Ivan Spoljaric",
+  "license": "ISC"
+}
