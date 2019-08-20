@@ -3,10 +3,16 @@ const fib = require('../index');
 
 suite('TDD tests', function() {
   suite('fibonnaci', function() {
-    test('throws error if value of argument not integer', function() {
-      assert.throws(fib('Hey, I\'m a string'));
-      assert.throws(fib(true));
-      assert.throws(fib(null));
+    test('throws error if value of argument string', function() {
+      assert.throws(() => fib('Hey, I\'m a string'), Error, 'The argument must be a valid integer!');
+    });
+
+    test('throws error if value of argument boolean', function() {
+      assert.throws(() => fib(true), Error, 'The argument must be a valid integer!');
+    });
+
+    test('throws error if value of argument null', function() {
+      assert.throws(() => fib(null), Error, 'The argument must be a valid integer!');
     });
   
     test('throws error if value of arg int < 0', function() {
