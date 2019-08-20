@@ -16,7 +16,7 @@ suite('TDD tests', function() {
     });
   
     test('throws error if value of arg int < 0', function() {
-      assert.throws(fib(-1));
+      assert.throws(() => fib(-1), Error, 'The argument must be greater than or equal to 0!');
     });
   
     test('is array when int >= 0', function() {
