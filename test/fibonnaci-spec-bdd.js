@@ -4,19 +4,19 @@ const fib = require('../index');
 describe('BDD tests', function() {
   describe('fibonnaci', function() {
     it('should throw an error when given a string', function() {
-      expect(() => fib('Hey, I\'m a string')).to.throw('The argument must be a valid integer!');
+      expect(() => fib('Hey, I\'m a string')).to.throw(Error, 'The argument must be a valid integer!');
     });
 
     it('should throw an error when given a boolean', function() {
-      expect(() => fib(true)).to.throw('The argument must be a valid integer!');
+      expect(() => fib(true)).to.throw(Error, 'The argument must be a valid integer!');
     });
 
     it('should throw an error when given a null', function() {
-      expect(() => fib(null)).to.throw('The argument must be a valid integer!');
+      expect(() => fib(null)).to.throw(Error, 'The argument must be a valid integer!');
     });
 
     it('should throw an error when given a value less than 0', function() {
-      expect(() => fib(-1)).to.throw('The argument must be greater than or equal to 0!');
+      expect(() => fib(-1)).to.throw(Error, 'The argument must be greater than or equal to 0!');
     });
 
     it('should return an array when given a value greater than or equal to 0', function() {
