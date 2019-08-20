@@ -4,7 +4,8 @@
   "description": "write fibonnaci function to practice tdd",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -u tdd"
+    "test-tdd": "mocha test/fibonnaci-spec-tdd.js -u tdd",
+    "test-bdd": "mocha test/fibonnaci-spec-bdd.js"
   },
   "keywords": [
     "tdd",

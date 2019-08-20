@@ -1,4 +1,4 @@
-const assert = require('chai').assert;
+const { assert } = require('chai');
 const fib = require('../index');
 
 suite('TDD tests', function() {
