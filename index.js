@@ -7,7 +7,7 @@ const fib = num => {
     throw new Error('The argument must be greater than or equal to 0!');
   }
 
-  return;
+  return [];
 };
 
 module.exports = fib;

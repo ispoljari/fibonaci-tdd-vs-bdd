@@ -20,27 +20,28 @@ suite('TDD tests', function() {
     });
   
     test('is array when int >= 0', function() {
+      assert.isArray(fib(0));
       assert.isArray(fib(1));
     });
   
     test('equals [] if value of arg 0', function() {
-      assert.equal([], fib(0));
+      assert.deepEqual(fib(0), []);
     });
   
     test('equals [1] if value of arg 1', function() {
-      assert.equal([1], fib(1));
+      assert.deepEqual(fib(1), [1]);
     });
   
     test('equals [1,1] if value of arg 2', function() {
-      assert.equal([1,1], fib(2));
+      assert.deepEqual(fib(2), [1,1]);
     });
   
     test('equals [1,1,2] if value of arg 3', function() {
-      assert.equal([1,1,2], fib(3));
+      assert.deepEqual(fib(3), [1,1,2]);
     });
   
     test('equals [1,1,2,3,5,8,13,21,34] if value of arg 9', function() {
-      assert.equal([1,1,2,3,5,8,13,21,34], fib(9));
+      assert.deepEqual(fib(9), [1,1,2,3,5,8,13,21,34]);
     });
   });
 });
